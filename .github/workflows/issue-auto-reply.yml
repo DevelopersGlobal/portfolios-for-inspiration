@@ -20,7 +20,7 @@ jobs:
             
             const message = "Thank you for raising this issue! Our team will review it soon.\n\n" +
               "For more queries or discussions or approval of requests, please join the Discord server for further discussion: [Discord Link](https://discord.com/invite/Yn9g6KuWyA)";
-            github.rest.issues.createComment({
+            await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
